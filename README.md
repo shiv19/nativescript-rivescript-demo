@@ -1,4 +1,4 @@
-# nativescript-rivescript-demo
+# nativescript-rivescript-demo [v0.1.0]
 [![Twitter URL](https://img.shields.io/badge/twitter-%40MultiShiv19-blue.svg)](https://twitter.com/MultiShiv19)
 
 
