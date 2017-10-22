@@ -2,16 +2,12 @@
   "description": "NativeScript Application that demonstrate use of Rivescript",
   "license": "MIT",
   "version": "0.1.0",
-  "author": {
-        "name": "MultiShiv19",
-        "email": "contact@shivaprasad.me",
-        "url": "https://github.com/shiv19"
-  },
+  "author": "MultiShiv19",
   "readme": "README.md",
   "repository": "https://github.com/shiv19/nativescript-rivescript-demo",
   "bugs": {
-        "url": "https://github.com/shiv19/nativescript-rivescript-demo/issues"
-   },
+    "url": "https://github.com/shiv19/nativescript-rivescript-demo/issues"
+  },
   "nativescript": {
     "id": "org.nativescript.nativescriptrivescriptdemo",
     "tns-android": {

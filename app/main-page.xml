@@ -10,7 +10,6 @@
             </StackLayout>
         </ActionBar>
     </Page.actionBar>
-
     <StackLayout>
 
         <ListView height="90%" margin-bottom="50" padding="5" id="listView" items="{{ chats }}">
@@ -41,14 +40,14 @@
                 </StackLayout>
             </ListView.itemTemplate>
         </ListView>
-        
-        <StackLayout id="chatbox" height="10%">
+        <StackLayout id="chatbox">
             <GridLayout columns="*,auto" style="padding: 10">
                 <TextField 
                     row="0" col="0"
                     id="chatText"
                     class="chatTextField"
                     returnKeyType="done"
+                    tap="onTFTap"
                     returnPress="{{ onChat }}"
                     text="{{ userMsg }}"></TextField>
                 <Button 
@@ -61,6 +60,5 @@
                     text="send &#xf1d9;" tap="{{ onChat }}"></Button>
             </GridLayout>
         </StackLayout>
-
     </StackLayout>
 </Page>

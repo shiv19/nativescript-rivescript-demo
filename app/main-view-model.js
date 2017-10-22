@@ -19,6 +19,7 @@ function createViewModel() {
     const viewModel = new Observable();
     viewModel.userMsg = "";
     viewModel.chats = new ObservableArray([]);
+    viewModel.listView = null;
 
     viewModel.onChat = function() {
         if (viewModel.userMsg.trim() !== "") {
@@ -65,9 +66,11 @@ function createViewModel() {
                     botReply.message = response.reply;
                 }
                 viewModel.chats.push(botReply);
-                viewModel.userMsg = "";
+                const count = viewModel.listView.items.length;
+                viewModel.listView.scrollToIndex(count - 1);
             });
-        }        
+            viewModel.set("userMsg", "");
+        }
     };
 
     return viewModel;
