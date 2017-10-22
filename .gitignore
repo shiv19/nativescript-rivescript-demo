@@ -1,0 +1,16 @@
+npm-debug.log
+.DS_Store
+
+*.js.map
+hooks/
+lib/
+node_modules/
+platforms/
+tmp/
+typings/
+.idea
+0.10.9
+*.keystore
+*.css
+.tmp_backup
+.vscode

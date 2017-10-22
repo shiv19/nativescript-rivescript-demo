@@ -1,0 +1,27 @@
+{
+  "description": "NativeScript Application that demonstrate use of Rivescript",
+  "license": "MIT",
+  "readme": "README.md",
+  "repository": "<fill-your-repository-here>",
+  "nativescript": {
+    "id": "org.nativescript.nativescriptrivescriptdemo",
+    "tns-android": {
+      "version": "3.2.0"
+    }
+  },
+  "scripts": {
+    "lint": "eslint \"app/**/*.js\""
+  },
+  "dependencies": {
+    "nativescript-theme-core": "~1.0.2",
+    "rivescript": "^1.17.2",
+    "tns-core-modules": "~3.2.0"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.4.5",
+    "babel-types": "6.4.5",
+    "babylon": "6.4.5",
+    "lazy": "1.0.11",
+    "eslint": "4.6.1"
+  }
+}
