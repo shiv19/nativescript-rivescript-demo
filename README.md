@@ -6,7 +6,7 @@ This repo is a demo to show the power of NativeScript + RiveScript
 
 ## Screenshots
 
-<img src="assets/demo.jpg?raw=true" height="320" > 
+<img src="assets/demoandroid.jpg?raw=true" height="320" > 
 
 ## Installation
 
