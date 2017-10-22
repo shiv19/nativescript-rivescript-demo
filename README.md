@@ -21,6 +21,7 @@ tns run android (or ios)
 Just chat with that bot, using the chat box. 
 (try sending "rpg demo", for something cool, but remember to send "exit" in the end
 because same instance of the bot is being using on every app in this demo)
+(also, if you see the bot is acting unusual, it's a good idea to send "exit" once)
 
 ## Server Code
 The server can be found at <a href="https://github.com/shiv19/node-rivebot" target="_blank">this repository</a>
