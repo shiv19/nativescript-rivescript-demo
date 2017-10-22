@@ -44,7 +44,13 @@
         
         <StackLayout id="chatbox" height="10%">
             <GridLayout columns="*,auto" style="padding: 10">
-                <TextField id="chatText" class="chatTextField" row="0" col="0" text="{{ userMsg }}"></TextField>
+                <TextField 
+                    row="0" col="0"
+                    id="chatText"
+                    class="chatTextField"
+                    returnKeyType="done"
+                    returnPress="{{ onChat }}"
+                    text="{{ userMsg }}"></TextField>
                 <Button 
                     row="0" col="1"
                     id="chatBtn" 
