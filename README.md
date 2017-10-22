@@ -18,7 +18,7 @@ tns run android (or ios)
 
 ## Usage 
 
-Just chat with that bot, using the chat box.
+Just chat with that bot, using the chat box. (try sending "rpg demo", for something cool)
 
 ## Server Code
 The server can be found at <a href="https://github.com/shiv19/node-rivebot" target="_blank">this repository</a>
