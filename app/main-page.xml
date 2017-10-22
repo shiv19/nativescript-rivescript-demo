@@ -1,32 +1,60 @@
-<!--
-The markup in NativeScript apps contains a series of user interface components, each
-of which NativeScript renders with a platform-specific iOS or Android native control.
-You can find a full list of user interface components you can use in your app at
-https://docs.nativescript.org/ui/components.
--->
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
-    <!--
-    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
-    http://docs.nativescript.org/ui/action-bar
-    -->
+
     <Page.actionBar>
-        <ActionBar title="My App" icon="" class="action-bar">
+        <ActionBar class="action-bar">
+            <StackLayout orientation="horizontal"
+                ios:horizontalAlignment="center"
+                android:horizontalAlignment="left">
+                <Image height="20" src="res://icon" class="action-image"></Image>
+                <Label text="ativeScript | RiveBot"  class="action-label"></Label>
+            </StackLayout>
         </ActionBar>
     </Page.actionBar>
-    <!--
-    The StackLayout stacks UI components on the screen—either vertically or horizontally.
-    In this case, the StackLayout does vertical stacking; you can change the stacking to
-    horizontal by applying a orientation="horizontal" attribute to the <StackLayout> element.
-    You can learn more about NativeScript layouts at
-    https://docs.nativescript.org/ui/layout-containers.
 
-    These components make use of several CSS class names that are part of the NativeScript
-    core theme, such as p-20, btn, h2, and text-center. You can view a full list of the
-    class names available for styling your app at https://docs.nativescript.org/ui/theme.
-    -->
-    <StackLayout class="p-20">
-        <Label text="Tap the button" class="h1 text-center"/>
-        <Button text="TAP" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
-        <Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
+    <StackLayout>
+
+        <ListView height="90%" margin-bottom="50" padding="5" id="listView" items="{{ chats }}">
+            <ListView.itemTemplate>
+                <StackLayout id="chatBubble">
+
+                    <StackLayout  visibility="{{ who === 'bot' ? 'visible' : 'collapsed' }}">
+                        <GridLayout width="100%" columns="*" rows="auto, 20" class="msg them">
+                            <StackLayout orientation="horizontal">
+                                <Image class="authorimg" width="30" height="30" stretch="aspectFill" verticalAlignment="top" src="{{ image }}" />
+                                <Label text="{{ message }}" textWrap="true" verticalAlignment="top" class="msg_text"/>                                
+                            </StackLayout>
+                            <Label class="msg_timestamp them" text="{{ timestamp }}" verticalAlignment="top" row="1" colSpan="2" />
+
+                        </GridLayout>
+                    </StackLayout>
+
+                    <StackLayout  visibility="{{ who === 'user' ? 'visible' : 'collapsed' }}">
+                        <GridLayout columns="*, auto" rows="auto, 40" class="msg me">
+                            <StackLayout col="1" orientation="horizontal" horizontalAlignment="right">
+                                <Label text="{{ message }}" class="msg_text" textWrap="true" verticalAlignment="top" />
+                                <Image class="authorimg" stretch="aspectFill" height="30" width="30" verticalAlignment="top" src="{{ image }}" col="1" />
+                            </StackLayout>
+                            <Label class="msg_timestamp me" text="{{ timestamp }}" verticalAlignment="top" row="1" col="1" />
+                        </GridLayout>
+                    </StackLayout>
+
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+        
+        <StackLayout id="chatbox" height="10%">
+            <GridLayout columns="*,auto" style="padding: 10">
+                <TextField id="chatText" class="chatTextField" row="0" col="0" text="{{ userMsg }}"></TextField>
+                <Button 
+                    row="0" col="1"
+                    id="chatBtn" 
+                    textTransform="none" 
+                    fontFamily="FontAwesome"
+                    height="40" padding="5" margin="5" 
+                    class="btn btn-primary" 
+                    text="send &#xf1d9;" tap="{{ onChat }}"></Button>
+            </GridLayout>
+        </StackLayout>
+
     </StackLayout>
 </Page>
