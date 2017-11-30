@@ -11,6 +11,5 @@ typings/
 .idea
 0.10.9
 *.keystore
-*.css
 .tmp_backup
 .vscode
